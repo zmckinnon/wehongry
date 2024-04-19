@@ -6,7 +6,7 @@ import { FoodTruck } from './models/FoodTruck.ts';
 
 function App() {
   const [myPosition, setMyPosition] = useState<Position>();
-  const { foodTrucks, loading } = useGetFoodTrucks({
+  const { foodTrucks, loading, loadMore } = useGetFoodTrucks({
     latitude: myPosition?.latitude,
     longitude: myPosition?.longitude,
   });
@@ -33,7 +33,13 @@ function App() {
     );
   }
 
-  return <FoodTruckSearchResults foodTrucks={foodTrucks} onGoBack={goBack} />;
+  return (
+    <FoodTruckSearchResults
+      foodTrucks={foodTrucks}
+      onGoBack={goBack}
+      onLoadMore={loadMore}
+    />
+  );
 }
 
 interface FoodTrucksSearchProps {
@@ -61,11 +67,13 @@ const FoodTrucksSearch: FC<FoodTrucksSearchProps> = ({
 interface FoodTruckSearchResults {
   foodTrucks: FoodTruck[];
   onGoBack: () => void;
+  onLoadMore: () => void;
 }
 
 const FoodTruckSearchResults: FC<FoodTruckSearchResults> = ({
   foodTrucks,
   onGoBack,
+  onLoadMore,
 }) => {
   return (
     <div className="container mx-auto p-2 grid gap-4">
@@ -75,12 +83,20 @@ const FoodTruckSearchResults: FC<FoodTruckSearchResults> = ({
           <FoodTruckCard key={index} foodTruck={foodTruck} />
         ))}
       </div>
-      <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        onClick={onGoBack}
-      >
-        Go Back
-      </button>
+      <div className="grid gap-4 md:grid-cols-2 grid-cols-1">
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          onClick={onGoBack}
+        >
+          Go Back
+        </button>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          onClick={onLoadMore}
+        >
+          Load More
+        </button>
+      </div>
     </div>
   );
 };

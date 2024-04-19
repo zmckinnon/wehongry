@@ -15,8 +15,9 @@ export const useGetFoodTrucks = ({
   longitude,
   radius = 5,
   take = 3,
-  skip = 0,
+  skip: defaultSkip = 0,
 }: OwnProps) => {
+  const [skip, setSkip] = useState<number>(defaultSkip);
   const [foodTrucks, setFoodTrucks] = useState<FoodTruck[]>();
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -41,9 +42,14 @@ export const useGetFoodTrucks = ({
     getFoodTrucks();
   }, [getFoodTrucks, latitude, longitude, radius, take, skip]);
 
+  const loadMore = () => {
+    setSkip(skip + take);
+  };
+
   return {
     foodTrucks,
     loading,
+    loadMore,
   };
 };
 
