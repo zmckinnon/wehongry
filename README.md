@@ -73,6 +73,7 @@ Find food trucks near you.
 
 - Naming - probably should have taken time to name models, services, etc. better
 - Performance - could have done more to optimize performance around distance
+- Empty states - could have done more to handle empty states
 
 **Trade-offs**
 

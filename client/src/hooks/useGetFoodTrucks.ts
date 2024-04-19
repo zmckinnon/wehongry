@@ -22,6 +22,8 @@ export const useGetFoodTrucks = ({ latitude, longitude, radius = 5, take = 3, sk
             const response = await fetch(getFoodTrucksUrl);
             const getFoodTrucksResponse = await response.json() as GetFoodTrucksReponse;
             setFoodTrucks(getFoodTrucksResponse.items);
+        } else {
+            setFoodTrucks(undefined);
         }
     }, [latitude, longitude, radius, take, skip]);
 
