@@ -1,5 +1,7 @@
 # We Hongry
 
+Find food trucks near you.
+
 ![We Hongry Gif](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTAzc2VnZXh3OHpjdXA4bnVkNHYwenBidHZ0dm4yOGFwNmNmcHF6bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/whUGWqc3L8uZveDBx5/giphy.gif)
 
 ## Scripts
