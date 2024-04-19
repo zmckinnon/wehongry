@@ -25,6 +25,8 @@ export const getFoodTrucksInRadius = async (position: Position, radiusInMiles: n
 
   const foodTrucksFilteredByRadius = foodTrucks.filter(x => haversine(position, { latitude: x.latitude, longitude: x.longitude }, { threshold: radiusInMiles, unit: 'mile' }));
 
+  // TODO: Filter by open now
+
   const foodTrucksPaged = foodTrucksFilteredByRadius.slice(paging.skip, paging.skip + paging.take);
 
   return {

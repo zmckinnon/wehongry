@@ -16,7 +16,7 @@ Find food trucks near you.
 ## To Do
 - [x] SF Food Truck Schedule Service
 - [x] Test to determine list of food trucks within certain radius on server
-- [ ] Find food trucks button
+- [x] Find food trucks button
 - [ ] Test to determine . . .
 - [ ] Test responsiveness
 - [ ] Food trucks map

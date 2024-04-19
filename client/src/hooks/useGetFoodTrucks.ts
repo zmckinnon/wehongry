@@ -3,15 +3,15 @@ import {config} from "../config.ts";
 import {FoodTruck} from "../models/FoodTruck.ts";
 
 type OwnProps = {
-    latitude: number;
-    longitude: number;
+    latitude?: number;
+    longitude?: number;
     radius?: number;
     take?: number;
     skip?: number;
 }
 
 export const useGetFoodTrucks = ({ latitude, longitude, radius = 5, take = 3, skip = 0 }: OwnProps) => {
-    const [foodTrucks, setFoodTrucks] = useState<FoodTruck[]>([]);
+    const [foodTrucks, setFoodTrucks] = useState<FoodTruck[]>(null);
 
     const getFoodTrucks = useCallback(async () => {
         if (latitude && longitude) {
