@@ -14,12 +14,9 @@ Find food trucks near you.
 - Responsive
 
 ## To Do
-- [ ] Document things I skipped, trade-offs, and shortcuts
-- [ ] Steps to make it production ready
-- [ ] Most impactful new features to build next
+- [x] SF Food Truck Schedule Service
 - [ ] Test to determine list of food trucks within certain radius on server
 - [ ] Test to determine . . .
-- [ ] SF Food Truck Schedule Service
 - [ ] Test responsiveness
 - [ ] Find food trucks button
 - [ ] Food trucks map
@@ -28,6 +25,9 @@ Find food trucks near you.
 - [ ] Paging
 - [ ] Cards
 - [ ] Get more food trucks
+- [ ] Document things I skipped, trade-offs, and shortcuts
+- [ ] Steps to make it production ready
+- [ ] Most impactful new features to build next
 
 ## Scripts
 
@@ -82,5 +82,9 @@ Find food trucks near you.
 - 
 
 ## Steps to Make it Production Ready
+
+1. 
+
+## Most Impactful New Features to Build Next
 
 1. 
