@@ -31,4 +31,7 @@ Find food trucks near you.
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 
+**READMEs**
 
+- [client](./client/README.md)
+- [server](./server/README.md)
