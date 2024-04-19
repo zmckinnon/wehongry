@@ -1,14 +1,16 @@
-import {FC} from "react";
-import {FoodTruck} from "../models/FoodTruck.ts";
+import { FC } from 'react';
+import { FoodTruck } from '../models/FoodTruck.ts';
 
 interface OwnProps {
-    foodTruck: FoodTruck;
+  foodTruck: FoodTruck;
 }
 
 export const FoodTruckCard: FC<OwnProps> = ({ foodTruck }) => {
-    return <div className="p-2 rounded-md bg-gray-400">
-        <div>{foodTruck.name}</div>
-        <div>{foodTruck.tagline}</div>
-        <div>{foodTruck.address}</div>
+  return (
+    <div className="p-2 rounded-md bg-gray-400">
+      <div>{foodTruck.name}</div>
+      <div>{foodTruck.tagline}</div>
+      <div>{foodTruck.address}</div>
     </div>
-}
+  );
+};

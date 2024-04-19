@@ -74,6 +74,7 @@ Find food trucks near you.
 - Naming - probably should have taken time to name models, services, etc. better
 - Performance - could have done more to optimize performance around distance
 - Empty states - could have done more to handle empty states
+- Dead ends - could have done more to handle dead ends
 
 **Trade-offs**
 
@@ -88,7 +89,8 @@ Find food trucks near you.
 ## Steps to Make it Production Ready
 
 1. Needs better design. It should look better.
-2.
+2. Need to support dead end and empty states.
+3. Add some actions on the cards.
 
 ## Most Impactful New Features to Build Next
 

@@ -1,41 +1,52 @@
-import {useCallback, useEffect, useState} from "react";
-import {config} from "../config.ts";
-import {FoodTruck} from "../models/FoodTruck.ts";
+import { useCallback, useEffect, useState } from 'react';
+import { config } from '../config.ts';
+import { FoodTruck } from '../models/FoodTruck.ts';
 
 type OwnProps = {
-    latitude?: number;
-    longitude?: number;
-    radius?: number;
-    take?: number;
-    skip?: number;
-}
+  latitude?: number;
+  longitude?: number;
+  radius?: number;
+  take?: number;
+  skip?: number;
+};
 
-export const useGetFoodTrucks = ({ latitude, longitude, radius = 5, take = 3, skip = 0 }: OwnProps) => {
-    const [foodTrucks, setFoodTrucks] = useState<FoodTruck[]>();
+export const useGetFoodTrucks = ({
+  latitude,
+  longitude,
+  radius = 5,
+  take = 3,
+  skip = 0,
+}: OwnProps) => {
+  const [foodTrucks, setFoodTrucks] = useState<FoodTruck[]>();
+  const [loading, setLoading] = useState<boolean>(false);
 
-    const getFoodTrucks = useCallback(async () => {
-        if (latitude && longitude) {
-            let getFoodTrucksUrl = `${config.weHongryApiBaseEndpoint}/trucks`;
-            getFoodTrucksUrl += `?latitude=${latitude}&longitude=${longitude}&radius=${radius}`;
-            getFoodTrucksUrl += `&take=${take}&skip=${skip}`;
+  const getFoodTrucks = useCallback(async () => {
+    setLoading(true);
+    if (latitude && longitude) {
+      let getFoodTrucksUrl = `${config.weHongryApiBaseEndpoint}/trucks`;
+      getFoodTrucksUrl += `?latitude=${latitude}&longitude=${longitude}&radius=${radius}`;
+      getFoodTrucksUrl += `&take=${take}&skip=${skip}`;
 
-            const response = await fetch(getFoodTrucksUrl);
-            const getFoodTrucksResponse = await response.json() as GetFoodTrucksReponse;
-            setFoodTrucks(getFoodTrucksResponse.items);
-        } else {
-            setFoodTrucks(undefined);
-        }
-    }, [latitude, longitude, radius, take, skip]);
+      const response = await fetch(getFoodTrucksUrl);
+      const getFoodTrucksResponse =
+        (await response.json()) as GetFoodTrucksReponse;
+      setFoodTrucks(getFoodTrucksResponse.items);
+    } else {
+      setFoodTrucks(undefined);
+    }
+    setLoading(false);
+  }, [latitude, longitude, radius, take, skip]);
 
-    useEffect(() => {
-        getFoodTrucks();
-    }, [getFoodTrucks, latitude, longitude, radius, take, skip]);
+  useEffect(() => {
+    getFoodTrucks();
+  }, [getFoodTrucks, latitude, longitude, radius, take, skip]);
 
-    return {
-        foodTrucks,
-    };
-}
+  return {
+    foodTrucks,
+    loading,
+  };
+};
 
 type GetFoodTrucksReponse = {
-    items: FoodTruck[];
-}
+  items: FoodTruck[];
+};
