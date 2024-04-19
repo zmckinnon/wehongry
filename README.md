@@ -21,10 +21,9 @@ Find food trucks near you.
 - [x] My location
 - [x] Food truck list
 - [x] Cards
-- [ ] Food trucks map
-- [ ] Paging
-- [ ] Get more food trucks
-- [ ] Test responsiveness
+- [x] Paging
+- [x] Get more food trucks
+- [x] Test responsiveness
 - [x] Document things I skipped, trade-offs, and shortcuts
 - [x] Steps to make it production ready
 - [x] Most impactful new features to build next
@@ -101,3 +100,4 @@ Find food trucks near you.
 2. Ratings and Reviews - It'd be nice to know if the food is any good.
 3. Food Type Filter - Users might be in the mood for a particular type of food.
 4. Food Truck Schedule - It'd be nice to know when they are open.
+5. Add a map - It'd be nice to see where they are on a map.
