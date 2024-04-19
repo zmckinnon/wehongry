@@ -14,20 +14,20 @@ Find food trucks near you.
 - Responsive
 
 ## To Do
+
 - [x] SF Food Truck Schedule Service
 - [x] Test to determine list of food trucks within certain radius on server
 - [x] Find food trucks button
-- [ ] Test to determine . . .
-- [ ] Test responsiveness
+- [x] My location
+- [x] Food truck list
+- [x] Cards
 - [ ] Food trucks map
-- [ ] My location
-- [ ] Food truck list
 - [ ] Paging
-- [ ] Cards
 - [ ] Get more food trucks
-- [ ] Document things I skipped, trade-offs, and shortcuts
-- [ ] Steps to make it production ready
-- [ ] Most impactful new features to build next
+- [ ] Test responsiveness
+- [x] Document things I skipped, trade-offs, and shortcuts
+- [x] Steps to make it production ready
+- [x] Most impactful new features to build next
 
 ## Scripts
 
@@ -78,7 +78,8 @@ Find food trucks near you.
 **Trade-offs**
 
 - Share code between client and server
-- Tailwind CSS - I have never actually used it before, so I could have gotten more done if I used something I was more familiar with
+- Tailwind CSS - I have never actually used it before, so I could have gotten more done if I used something I was more
+  familiar with
 
 **Shortcuts**
 
@@ -87,11 +88,12 @@ Find food trucks near you.
 ## Steps to Make it Production Ready
 
 1. Needs better design. It should look better.
-2. 
+2.
 
 ## Most Impactful New Features to Build Next
 
-1. Directions - I have their positions. I assume the next thing they would want to do is go there, so directions would be low hanging fruit.
+1. Directions - I have their positions. I assume the next thing they would want to do is go there, so directions would
+   be low hanging fruit.
 2. Ratings and Reviews - It'd be nice to know if the food is any good.
 3. Food Type Filter - Users might be in the mood for a particular type of food.
 4. Food Truck Schedule - It'd be nice to know when they are open.

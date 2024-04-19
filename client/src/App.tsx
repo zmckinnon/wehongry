@@ -30,7 +30,7 @@ function App() {
 
     return (
         <div className="container mx-auto p-2 grid gap-4">
-            <h1 className="text-xl">Food Trucks</h1>
+            <h1 className="text-xl font-bold">Food Trucks</h1>
             <div className="grid gap-4 md:grid-cols-3 grid-cols-1">
                 {foodTrucks.map((foodTruck, index) => <FoodTruckCard key={index} foodTruck={foodTruck}/>)}
             </div>
