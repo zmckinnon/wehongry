@@ -75,6 +75,7 @@ Find food trucks near you.
 - Performance - could have done more to optimize performance around distance
 - Empty states - could have done more to handle empty states
 - Dead ends - could have done more to handle dead ends
+- Open Now Filtering - wanted to move on to the front end instead of focusing on the backend
 
 **Trade-offs**
 
@@ -85,6 +86,7 @@ Find food trucks near you.
 **Shortcuts**
 
 - Integration tests are probably super brittle
+- Just skipped any routing whatsoever
 
 ## Steps to Make it Production Ready
 
