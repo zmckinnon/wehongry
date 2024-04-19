@@ -4,6 +4,31 @@ Find food trucks near you.
 
 ![We Hongry Gif](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTAzc2VnZXh3OHpjdXA4bnVkNHYwenBidHZ0dm4yOGFwNmNmcHF6bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/whUGWqc3L8uZveDBx5/giphy.gif)
 
+## Requirements
+
+- Use typescript for client and server
+- Use React for the client
+- Use Typescript for the server
+- Centered "Find Food Trucks" button
+- Show up to three per page
+- Responsive
+
+## To Do
+- [ ] Document things I skipped, trade-offs, and shortcuts
+- [ ] Steps to make it production ready
+- [ ] Most impactful new features to build next
+- [ ] Test to determine list of food trucks within certain radius on server
+- [ ] Test to determine . . .
+- [ ] SF Food Truck Schedule Service
+- [ ] Test responsiveness
+- [ ] Find food trucks button
+- [ ] Food trucks map
+- [ ] My location
+- [ ] Food truck list
+- [ ] Paging
+- [ ] Cards
+- [ ] Get more food trucks
+
 ## Scripts
 
 - `build` - Build the server and client
@@ -30,8 +55,32 @@ Find food trucks near you.
 - [Vite](https://vitejs.dev/)
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Haversine](https://www.npmjs.com/package/haversine)
+- [Tailwind](https://tailwindui.com/)
 
 **READMEs**
 
 - [client](./client/README.md)
 - [server](./server/README.md)
+
+**Data Sources**
+
+- [SF Food Truck Data](https://data.sfgov.org/resource/jjew-r69b.json)
+
+## Things I skipped, Trade-offs, and Shortcuts
+
+**Skipped**
+
+- 
+
+**Trade-offs**
+
+- 
+
+**Shortcuts**
+
+- 
+
+## Steps to Make it Production Ready
+
+1. 
