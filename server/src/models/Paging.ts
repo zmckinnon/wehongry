@@ -1,4 +1,4 @@
 export type Paging = {
-    take: number;
-    skip: number;
-}
+  take: number;
+  skip: number;
+};
