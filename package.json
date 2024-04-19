@@ -1,0 +1,27 @@
+{
+  "name": "@zmckinnon/wehongry",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Find food trucks near you.",
+  "scripts": {
+    "build": "npm run server:build && npm run client:build",
+    "test": "npm run server:test && npm run client:test",
+    "lint": "npm run server:lint && npm run client:lint",
+    "server:build": "cd server && npm run build",
+    "server:dev": "cd server && npm run dev",
+    "server:lint": "cd server && npm run lint",
+    "server:start": "cd server && npm start",
+    "server:test": "cd server && npm test",
+    "client:build": "cd client && npm run build",
+    "client:dev": "cd client && npm run dev",
+    "client:lint": "cd client && npm run lint",
+    "client:start": "cd client && npm start",
+    "client:test": "cd client && npm test"
+  },
+  "author": "@zmckinnon",
+  "license": "UNLICENSED",
+  "workspaces": [
+    "server",
+    "client"
+  ]
+}
