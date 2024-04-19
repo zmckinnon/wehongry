@@ -1,34 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {useGetFoodTrucks} from "./hooks/useGetFoodTrucks.ts";
+import {FoodTruckCard} from "./food-trucks/FoodTruckCard.tsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const myPosition = {
+    latitude: 37.745156012803449,
+    longitude: -122.403946659673494
+  }
+  const { foodTrucks } = useGetFoodTrucks({latitude: myPosition.latitude, longitude: myPosition.longitude});
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="container mx-auto px-2">
+      <h1>Food Trucks</h1>
+      <div className="grid gap-4 md:grid-cols-3 grid-cols-1">
+        {foodTrucks.map((foodTruck, index) => <FoodTruckCard key={index} foodTruck={foodTruck} />)}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
