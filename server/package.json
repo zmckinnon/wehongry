@@ -5,8 +5,8 @@
   "description": "Backend API for WeHongry",
   "main": "src/index.ts",
   "scripts": {
-    "start": "ts-node src/index.ts",
-    "dev": "nodemon src/index.ts",
+    "start": "ts-node -r dotenv/config src/index.ts",
+    "dev": "nodemon -r dotenv/config src/index.ts",
     "build": "tsc",
     "start:dist": "node dist/src/index.js",
     "lint": "eslint --fix src test",
