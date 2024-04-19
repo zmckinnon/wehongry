@@ -15,7 +15,7 @@ Find food trucks near you.
 
 ## To Do
 - [x] SF Food Truck Schedule Service
-- [ ] Test to determine list of food trucks within certain radius on server
+- [x] Test to determine list of food trucks within certain radius on server
 - [ ] Test to determine . . .
 - [ ] Test responsiveness
 - [ ] Find food trucks button
@@ -71,7 +71,8 @@ Find food trucks near you.
 
 **Skipped**
 
-- 
+- Naming - probably should have taken time to name models, services, etc. better
+- Performance - could have done more to optimize performance around distance
 
 **Trade-offs**
 
@@ -79,7 +80,7 @@ Find food trucks near you.
 
 **Shortcuts**
 
-- 
+- Integration tests are probably super brittle
 
 ## Steps to Make it Production Ready
 
