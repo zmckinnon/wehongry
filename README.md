@@ -47,7 +47,7 @@ Find food trucks near you.
 **App Endpoints**
 
 - [app.wehongry.xyz](https://app.wehongry.xyz/)
-- [api.wehongry.xyz](https://api.wehongry.xyz/)
+- [api.wehongry.xyz trucks endpoint](https://api.wehongry.xyz/trucks?latitude=37.745156012803449&longitude=-122.403946659673494&radius=1&take=3&skip=0)
 
 **Libraries**
 
