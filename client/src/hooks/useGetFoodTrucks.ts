@@ -11,7 +11,7 @@ type OwnProps = {
 }
 
 export const useGetFoodTrucks = ({ latitude, longitude, radius = 5, take = 3, skip = 0 }: OwnProps) => {
-    const [foodTrucks, setFoodTrucks] = useState<FoodTruck[]>(null);
+    const [foodTrucks, setFoodTrucks] = useState<FoodTruck[]>();
 
     const getFoodTrucks = useCallback(async () => {
         if (latitude && longitude) {
